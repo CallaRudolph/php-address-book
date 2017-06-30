@@ -4,12 +4,14 @@
         private $name;
         private $phone_number;
         private $address;
+        private $image;
 
-        function __construct($name, $phone_number, $address)
+        function __construct($name, $phone_number, $address, $image)
         {
             $this->name = $name;
             $this->phone_number = $phone_number;
             $this->address = $address;
+            $this->image = $image;
         }
 
         function setName($new_name)
@@ -40,6 +42,16 @@
         function getAddress()
         {
             return $this->address;
+        }
+
+        function setImage($new_image)
+        {
+            $this->image = $new_image;
+        }
+
+        function getImage()
+        {
+            return $this->image;
         }
 
         function save()

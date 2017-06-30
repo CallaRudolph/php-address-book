@@ -5,4 +5,5 @@ body {
 #border {
     border: 2px solid black;
     padding-left: 8px;
+    margin-right: 150px;
 }
