@@ -7,12 +7,18 @@
 <body>
     <div class='container'>
         <h1>New contact added!</h1>
-        <ul class='list-unstyled'>
-            <li><h3>{{ new_contact.getName }}</h3></li>
-            <li><img src='{{ new_contact.getImage }}' alt='contact photo' width='64px'></li>
-            <li>Phone: {{ new_contact.getPhoneNumber }}</li>
-            <li>Address: {{ new_contact.getAddress }}</li>
-        </ul>
+        <div class='row'>
+            <div class='col-md-1'>
+                <h6><img src='{{ new_contact.getImage }}' alt='contact photo' width='64px'></h6>
+            </div>
+            <div class='col-md-11'>
+                <ul class='list-unstyled'>
+                    <li><h4>{{ new_contact.getName }}</h4></li>
+                    <li>Phone: {{ new_contact.getPhoneNumber }}</li>
+                    <li>Address: {{ new_contact.getAddress }}</li>
+                </ul>
+            </div>
+        </div>
         <h3><a href='/'>View all acquaintances</a></h3>
     </div>
 </body>
