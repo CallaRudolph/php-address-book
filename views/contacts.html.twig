@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
     <title>Address Book</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
                             <h6><img src='{{ contact.getImage }}' alt='contact photo' width='64px'></h6>
                         </div>
                         <div class='col-md-11'>
-                            <h5>{{ contact.getName }}</h5>
+                            <h4>{{ contact.getName }}</h4>
                             <ul class='list-unstyled'>
                                 <li>Phone: {{ contact.getPhoneNumber }}</li>
                                 <li>Address: {{ contact.getAddress }}</li>
@@ -46,12 +47,12 @@
                 <label for='image'>Image URL:</label>
                 <input type='text' name='image' id='image' class='form-control'>
             </div>
-            <button type='submit' class='btn-info'>Add</button>
+            <button type='submit' class='btn'>Add New Friend</button>
         </form>
         <br>
-        <h5>Hate everyone?</h5>
+        <h4>Hate everyone?</h4>
         <form action='/delete_contacts' method='post'>
-            <button type='submit' class='btn-danger'>Delete 'em all</button>
+            <button type='submit' class='btn' id='trash'>Delete 'em all</button>
         </form>
     </div>
 </body>

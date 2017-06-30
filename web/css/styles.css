@@ -1,9 +1,26 @@
 body {
-    background-color: lavender;
+    background-color: #e6fff2;
+    font-family: 'Bellefair', serif;
+    border: 2px solid black;
+    bord
 }
 
 #border {
     border: 2px solid black;
     padding-left: 8px;
     margin-right: 150px;
+    background-image: url('/../img/lines.jpg');
+    background-size: cover;
+    text-shadow: 1px 1px black;
+    color: white;
+}
+
+.btn {
+    background-color: #ccb3ff;
+    color: blue;
+    /*text-shadow: .5px .5px grey;*/
+}
+
+#trash {
+    background-color: #ff3399;
 }
