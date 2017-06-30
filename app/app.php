@@ -1,7 +1,13 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/Address.php";
+    require_once __DIR__."/../src/Contact.php";
+
+    session_start();
+
+    if(empty($_SESSION['list_of_contacts'])) {
+        $_SESSION['list_of_contacts'] = array();
+    }
 
     $app = new Silex\Application();
 
@@ -10,7 +16,7 @@
     ));
 
     $app->get("/", function() use ($app) {
-        return "Home";
+        return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getAll()));
     });
 
     return $app;
