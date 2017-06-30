@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+    <title>Search Results</title>
+</head>
+<body>
+    <div class='container'>
+        {% if contact is empty %}
+            <h3>No contact found; time to make more friends</h3>
+        {% else %}
+            {% for result in contact %}
+            <div class='row'>
+                <div class='col-md-1'>
+                    <h6><img src='{{ result.getImage }}' alt='contact photo' width='64px'></h6>
+                </div>
+                <div class='col-md-11'>
+                    <ul class='list-unstyled'>
+                        <li><h4>{{ result.getName }}</h4></li>
+                        <li>Phone: {{ result.getPhoneNumber }}</li>
+                        <li>Address: {{ result.getAddress }}</li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        <h3><a href='/'>View all acquaintances</a></h3>
+    </div>
+</body>
+</html>

@@ -25,6 +25,20 @@
         return $app['twig']->render('create_contact.html.twig', array('new_contact' => $contact));
     });
 
+    $app->get('/search_contacts', function() use ($app) {
+        $contacts = Contact::getAll();
+        $contacts_matching_search = array();
+
+        if (empty($contacts_matching_search) == true) {
+            foreach ($contacts as $contact) {
+                if ($contact->getName() == $_GET['search']) {
+                    array_push($contacts_matching_search, $contact);
+                }
+            }
+        }
+        return $app['twig']->render('search_contacts.html.twig', array('contact' => $contacts_matching_search));
+    });
+
     $app->post('/delete_contacts', function() use ($app) {
         return $app['twig']->render('delete_contacts.html.twig', array('delete_contacts' => Contact::deleteAll()));
     });
