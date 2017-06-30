@@ -53,6 +53,11 @@
         {
             return $this->image;
         }
+        // 
+        // function __destruct()
+        // {
+        //     unset($this->name, $this->phone_number, $this->address, $this->image);
+        // }
 
         function save()
         {

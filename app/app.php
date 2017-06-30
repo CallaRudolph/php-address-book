@@ -29,11 +29,9 @@
         $contacts = Contact::getAll();
         $contacts_matching_search = array();
 
-        if (empty($contacts_matching_search) == true) {
-            foreach ($contacts as $contact) {
-                if ($contact->getName() == $_GET['search']) {
-                    array_push($contacts_matching_search, $contact);
-                }
+        foreach ($contacts as $contact) {
+            if ($contact->getName() == $_GET['search']) {
+                array_push($contacts_matching_search, $contact);
             }
         }
         return $app['twig']->render('search_contacts.html.twig', array('contact' => $contacts_matching_search));
@@ -43,18 +41,35 @@
         return $app['twig']->render('delete_contacts.html.twig', array('delete_contacts' => Contact::deleteAll()));
     });
 
-    $app->post('/update_one', function() use ($app) {
-        $contact = new Contact($_POST['name'], $_POST['phone_number'], $_POST['address'], $_POST['image']);
-        $contact->save();
+    // $app->post('/update_one', function() use ($app) {
+    //     $contact = new Contact($_POST['name'], $_POST['phone_number'], $_POST['address'], $_POST['image']);
+    //     $contact->save();
+    //
+    //     foreach ($contacts as $contact) {
+    //         $_GET['search']) {
+    //             array_push($contacts_matching_search, $contact);
+    //         }
+    //     }
+    //
+    //     return $app['twig']->render('update_one.html.twig', array('delete_one' => Contact::trashOne()));
+    // });
 
-        foreach ($contacts as $contact) {
-            $_GET['search']) {
-                array_push($contacts_matching_search, $contact);
-            }
-        }
-
-        return $app['twig']->render('update_one.html.twig', array('delete_one' => Contact::trashOne()));
-    });
+    // $app->post('/delete_one', function() use ($app) {
+    //     $contacts = Contact::getAll();
+    //     $contacts_matching_search = array();
+    //
+    //     if (empty($contacts_matching_search) == true) {
+    //         foreach ($contacts as $contact) {
+    //             if ($contact->getName() == $_GET['search']) {
+    //                 unset($contacts_matching_search, $contact);
+    //                 array_push($contacts_matching_search, $contact);
+    //             }
+    //         }
+    //     }
+    //
+    //
+    //     return $app['twig']->render('delete_one.html.twig', array('contact' => $contacts_matching_search));
+    // });
 
     return $app;
 ?>
