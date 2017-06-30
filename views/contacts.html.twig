@@ -6,6 +6,7 @@
 <body>
     <div class='container'>
         <h1>Here are all of your contacts:</h1>
+        <br>
         {% if contacts is not empty %}
             <ul class='list-unstyled'>
                 {% for contact in contacts %}
@@ -19,7 +20,7 @@
         {% endif %}
         <br>
         <h3>Add some more acquaintances!</h3>
-        <form action='/create' method='post'>
+        <form action='/create_contact' method='post'>
             <div class='form-group'>
                 <label for='name'>Name:</label>
                 <input type='text' name='name' id='name' class='form-control'>
