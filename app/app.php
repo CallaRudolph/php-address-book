@@ -43,5 +43,18 @@
         return $app['twig']->render('delete_contacts.html.twig', array('delete_contacts' => Contact::deleteAll()));
     });
 
+    $app->post('/update_one', function() use ($app) {
+        $contact = new Contact($_POST['name'], $_POST['phone_number'], $_POST['address'], $_POST['image']);
+        $contact->save();
+
+        foreach ($contacts as $contact) {
+            $_GET['search']) {
+                array_push($contacts_matching_search, $contact);
+            }
+        }
+
+        return $app['twig']->render('update_one.html.twig', array('delete_one' => Contact::trashOne()));
+    });
+
     return $app;
 ?>

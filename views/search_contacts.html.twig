@@ -11,6 +11,8 @@
             <h3>No contact found; time to make more friends</h3>
         {% else %}
             {% for result in contact %}
+            <h3>Hey, here is the friend you were looking for!</h3>
+            <h6><em>Make it a great day.</em></h6>
             <div class='row'>
                 <div class='col-md-1'>
                     <h6><img src='{{ result.getImage }}' alt='contact photo' width='64px'></h6>
@@ -26,6 +28,27 @@
             {% endfor %}
         {% endif %}
         <h3><a href='/'>View all acquaintances</a></h3>
+        <br>
+        <h4>Want to update this contact?</h4>
+        <form action='/create_contact' method='post'>
+            <div class='form-group'>
+                <label for='name'>Name:</label>
+                <input type='text' name='name' id='name' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='phone_number'>Phone Number:</label>
+                <input type='text' name='phone_number' id='phone_number' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='address'>Full Address:</label>
+                <input type='text' name='address' id='address' class='form-control'>
+            </div>
+            <div class='form-group'>
+                <label for='image'>Image URL:</label>
+                <input type='text' name='image' id='image' class='form-control'>
+            </div>
+            <button type='submit' class='btn'>Complete Update</button>
+        </form>
     </div>
 </body>
 </html>
