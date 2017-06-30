@@ -6,6 +6,17 @@
 <body>
     <div class="container">
         <h1>Here are all of your contacts:</h1>
+        {% if contacts is not empty %}
+            <ul class='list-unstyled'>
+                {% for contact in contacts %}
+                    </li><h4>{{ contact.getName }}</h4></li>
+                    <ul>
+                        <li>Phone: {{ contact.getPhoneNumber }}</li>
+                        <li>Address: {{ contact.getAddress }}</li>
+                    </ul>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 </body>
 </html>
