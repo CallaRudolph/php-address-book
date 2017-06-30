@@ -2,7 +2,7 @@
 
 #### _Object-Oriented PHP Independent Project, 06.30.2017_
 
-#### By _**Calla Rudolph**_
+#### By _**Calla Rudolph (<callarudolph@gmail.com>)**_
 
 ## Description
 
