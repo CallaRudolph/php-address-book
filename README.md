@@ -6,7 +6,7 @@
 
 ## Description
 
-_This PHP project allows the user to enter individual personal information for contacts, which is then stored into an address book. The user can view his entire contact list, enter additional contacts, and delete all contacts as needed._
+_This PHP project allows the user to enter individual personal information for contacts, which is then stored into an address book. The user can view his entire contact list, enter additional contacts, and delete all contacts as needed. There is also a search feature by name to return a matching contact._
 
 ## Setup Requirements
 
@@ -30,6 +30,9 @@ _This PHP project allows the user to enter individual personal information for c
 * It allows the user to delete all contacts from the root path '/' and displays confirmation of deletion on '/delete_contacts' URL.
   * Example Input: User presses 'Delete' button on root path '/'
   * Example Output: User is directed to '/delete_contacts' URL, where confirmation of contact list deletion is displayed. The root path will now show an empty address book.
+* It allows the user to search the contact list by name (on the root path '/') to retrieve a full contact match. The search match will display on the '/search_contacts' URL.
+  * Example Input: User searches for 'rudolph' on root path '/'
+  * Example Output: User is directed to '/search_contacts' URL, where the match is returned: 'Calla Rudolph, Phone: 503.333.3333'
 
 ## Technologies Used
 
