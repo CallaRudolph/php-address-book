@@ -30,7 +30,7 @@
         $contacts_matching_search = array();
 
         foreach ($contacts as $contact) {
-            if ($contact->getName() == $_GET['search']) {
+            if (strtolower($contact->getName()) == strtolower($_GET['search'])) {
                 array_push($contacts_matching_search, $contact);
             }
         }
