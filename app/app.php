@@ -27,10 +27,11 @@
 
     $app->get('/search_contacts', function() use ($app) {
         $contacts = Contact::getAll();
+        $search = strtolower($_GET['search']);
         $contacts_matching_search = array();
 
         foreach ($contacts as $contact) {
-            if (strtolower($contact->getName()) == strtolower($_GET['search'])) {
+            if (strpos(strtolower($contact->getName()), $search) !== false) {
                 array_push($contacts_matching_search, $contact);
             }
         }
