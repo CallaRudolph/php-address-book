@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>New Contact</title>
 </head>
 <body>
@@ -8,8 +9,8 @@
         <h1>New contact added!</h1>
         <ul class='list-unstyled'>
             <li><h3>{{ new_contact.getName }}</h3></li>
-            <li>{{ new_contact.getPhoneNumber }}</li>
-            <li>{{ new_contact.getAddress }}</li>
+            <li>Phone: {{ new_contact.getPhoneNumber }}</li>
+            <li>Address: {{ new_contact.getAddress }}</li>
         </ul>
         <h3><a href='/'>View all acquaintances</a></h3>
     </div>

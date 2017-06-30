@@ -1,0 +1,8 @@
+body {
+    background-color: lavender;
+}
+
+#border {
+    border: 2px solid black;
+    padding-left: 8px;
+}

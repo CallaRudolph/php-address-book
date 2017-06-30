@@ -1,23 +1,26 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Address Book</title>
 </head>
 <body>
     <div class='container'>
-        <h1>Here are all of your contacts:</h1>
-        <br>
-        {% if contacts is not empty %}
-            <ul class='list-unstyled'>
-                {% for contact in contacts %}
-                    </li><h4>{{ contact.getName }}</h4></li>
-                    <ul>
-                        <li>Phone:{{ contact.getPhoneNumber }}</li>
-                        <li>Address:{{ contact.getAddress }}</li>
-                    </ul>
-                {% endfor %}
-            </ul>
-        {% endif %}
+            <h1>Here are all of your contacts:</h1>
+            <br>
+            <div id='border'>
+            {% if contacts is not empty %}
+                <ul class='list-unstyled'>
+                    {% for contact in contacts %}
+                        </li><h4>{{ contact.getName }}</h4></li>
+                        <ul>
+                            <li>Phone: {{ contact.getPhoneNumber }}</li>
+                            <li>Address: {{ contact.getAddress }}</li>
+                        </ul>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
         <br>
         <h3>Add some more acquaintances!</h3>
         <form action='/create_contact' method='post'>
