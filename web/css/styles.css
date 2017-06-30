@@ -17,8 +17,12 @@ body {
 
 .btn {
     background-color: #ccb3ff;
-    color: blue;
-    /*text-shadow: .5px .5px grey;*/
+    color: #ffff99;
+}
+
+#scan {
+    background-color: #ffcc99;
+    /*text-shadow: 1px 1px blue;*/
 }
 
 #trash {

@@ -50,6 +50,14 @@
             <button type='submit' class='btn'>Add New Friend</button>
         </form>
         <br>
+        <form action='/search'>
+            <div class='form-group'>
+                <label for='search'>Enter contact by first name to search:</label><br>
+                <input type='text' name='search' id='search'>
+            </div>
+            <button type='submit' class='btn' id='scan'>Search</button>
+        </form>
+        <br>
         <h4>Hate everyone?</h4>
         <form action='/delete_contacts' method='post'>
             <button type='submit' class='btn' id='trash'>Delete 'em all</button>
