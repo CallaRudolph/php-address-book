@@ -35,7 +35,7 @@
                 array_push($contacts_matching_search, $contact);
             }
         }
-        return $app['twig']->render('search_contacts.html.twig', array('contact' => $contacts_matching_search));
+        return $app['twig']->render('search_contacts.html.twig', array('contacts' => $contacts_matching_search));
     });
 
     $app->post('/delete_contacts', function() use ($app) {
