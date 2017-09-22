@@ -8,6 +8,10 @@
 
 _This PHP project allows the user to enter individual personal information for contacts, which is then stored into an address book. The user can view his entire contact list, enter additional contacts, and delete all contacts as needed. There is also a search feature by name to return a matching contact._
 
+![Home Page Preview](web/img/home.png)
+
+![Home Page Preview](web/img/search.png)
+
 ## Setup Requirements
 
 * Open GitHub site on your browser: https://github.com/CallaRudolph/php-address-book
